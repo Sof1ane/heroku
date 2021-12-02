@@ -58,7 +58,7 @@ elif filter_1 == 'Séries':
 
     if filter_2 == 'Title': 
         titles_series = df_series['titre'].unique()
-        titles_choice_series = st.sidebar.selectbox('Select your movie:', titles_series)
+        titles_choice_series = st.sidebar.selectbox('Select your serie:', titles_series)
 
     if filter_2 == 'Score': 
         score_series = df_series['score'].unique()
@@ -74,7 +74,7 @@ elif filter_1 == 'Séries':
 
     if filter_2 =='Time': 
         duree_series = df_series['episodes'].unique()
-        duree_choice_series = st.sidebar.selectbox('Duree (en épisodes)', duree_series)
+        duree_choice_series = st.sidebar.selectbox('Duree (episodes)', duree_series)
 
     with container_dataset:
 
