@@ -11,9 +11,6 @@ heures = time.str.extract(r"(\d+)h")
 minutes = time.str.extract(r'h(\d+)')
 
 
-
-df_films['duree']=heures.astype("float", errors="ignore")*60 + minutes.astype("float", errors="ignore")
-
 container_dataset = st.container()
 
 filter_1 = st.sidebar.radio('Which category you want to chose ?',('Films', 'Séries'))
