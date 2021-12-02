@@ -83,13 +83,13 @@ elif filter_1 == 'Séries':
         genre_choice_series = st.sidebar.selectbox('Genre', genre_series)
 
     if filter_2 =='Time': 
-        duree_series = df_series['duree'].unique()
-        duree_choice_series = st.sidebar.selectbox('Duree', duree_series)
+        duree_series = df_series['episodes'].unique()
+        duree_choice_series = st.sidebar.selectbox('Duree (en épisodes)', duree_series)
 
     with container_dataset:
 
         if filter_2 =='Time':
-            mask_duree_series = df_series['duree'] == duree_choice_series 
+            mask_duree_series = df_series['episodes'] == duree_choice_series 
             st.dataframe(data = df_series[mask_duree_series])
 
         elif filter_2 == 'Score':
