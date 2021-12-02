@@ -4,13 +4,6 @@ import pandas as pd
 df_films = pd.read_csv("films.csv")
 df_series = pd.read_csv("series.csv")
 
-time = df_films["duree"].str.replace(" ", "")
-time = time.str.replace("m", "")
-time = time.str.replace(",", "")
-heures = time.str.extract(r"(\d+)h")
-minutes = time.str.extract(r'h(\d+)')
-
-
 container_dataset = st.container()
 
 filter_1 = st.sidebar.radio('Which category you want to chose ?',('Films', 'Séries'))
